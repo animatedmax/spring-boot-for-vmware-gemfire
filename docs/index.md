@@ -152,17 +152,14 @@ documentation.
 ### Goals
 
 While the SBDG project has many goals and objectives, the primary goals
-of this project center around three key principles:
+of this project center around two key principles:
 
 
-1.  From ***Open Source*** (Apache Geode) to ***Commercial*** (VMware
-    GemFire).
-
-2.  From ***Non-Managed*** (self-managed/self-hosted or on-premise
+1. From ***Non-Managed*** (self-managed/self-hosted or on-premise
     installations) to ***Managed*** (VMware Tanzu GemFire for VMs,
     VMware Tanzu GemFire for K8S) environments.
 
-3.  With **little to no code or configuration changes** necessary.
+2. With **little to no code or configuration changes** necessary.
 
 
 It is also possible to go in the reverse direction, from *Managed* back
@@ -273,7 +270,7 @@ for example, `spring-geode-starter-session`), if you need to enable
 Spring Boot Actuator endpoints for VMware GemFire (for example,
 `spring-geode-starter-actuator`), or if you need assistance writing
 complex Unit and (Distributed) Integration Tests with Spring Test for
-Apache Geode (STDG) (for example, `spring-geode-starter-test`).
+[vmware-gemfire-name] (STDG) (for example, `spring-geode-starter-test`).
 
 
 You can declare and use any one of the SBDG modules:
@@ -925,12 +922,12 @@ For more details on Gradle dependency management, please refer to the
 
 
 Sometimes, though rarely, it may be necessary to exclude a (transitive)
-dependency included by a Spring Boot, or Spring Boot for Apache Geode,
+dependency included by a Spring Boot, or Spring Boot for [vmware-gemfire-name],
 starter.
 
 
 Perhaps a transitive dependency, such as Apache Log4j or Jackson, is
-pulled in by an underlying data store dependency, such as Apache Geode
+pulled in by an underlying data store dependency, such as [vmware-gemfire-name]
 or Redis, when using a starter (for example:
 `spring-boot-starter-data-redis`, or `spring-geode-starter`), that could
 cause a conflict with your Spring Boot application. Or, maybe the
@@ -948,174 +945,3 @@ You should be absolutely certain that removing the
 href="#sbdg-dependency-version-overrides">overridding</a> the
 (transitive) dependency is the correct course of action.
 </p>
-
-For example, when you include the `spring-geode-starter` (the base
-starter of Spring Boot for Apache Geode), you notice that Apache Lucene
-is transitively included by `org.apache.geode:geode-lucene`:
-
-
-
-#### Analyzing Dependencies using Gradle
-
-
-``` prettyprint
-$ gradlew :spring-geode-starter:dependencies
-
-...
-compileClasspath - Compile classpath for source set 'main'.
-+--- org.springframework.boot:spring-boot-starter -> 3.0.0-M5
-|    +--- org.springframework.boot:spring-boot:3.0.0-M5
-|    |    +--- org.springframework:spring-core:6.0.0-M6
-...
-+--- project :spring-geode
-|    +--- project :apache-geode-extensions
-|    |    +--- org.apache.geode:geode-core:1.15.0
-|    |    |    +--- antlr:antlr:2.7.7
-...
-|    |    +--- org.apache.geode:geode-lucene:1.15.0
-|    |    |    +--- org.apache.geode:geode-core:1.15.0 (*)
-|    |    |    \--- org.apache.lucene:lucene-core:6.6.6
-...
-|    |    \--- org.apache.geode:geode-wan:1.15.0
-...
-```
-
-
-
-#### Analyzing Dependencies using Maven
-
-
-``` prettyprint
-$ mvn dependency:tree
-
-...
-[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ spring-geode-app ---
-[INFO] org.example.app:spring-geode-app:jar:0.0.1-SNAPSHOT
-[INFO] +- org.springframework.geode:spring-geode-starter:jar:1.7.4:compile
-[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.7.1:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot:jar:2.7.1:compile
-...
-[INFO] |  +- org.springframework.geode:spring-geode:jar:1.7.4:compile
-[INFO] |  |  +- org.springframework.data:spring-data-geode:jar:2.7.1:compile
-[INFO] |  |  |  +- org.apache.geode:geode-core:jar:1.14.4:compile
-...
-[INFO] |  |  |  +- org.apache.geode:geode-lucene:jar:1.14.4:compile
-[INFO] |  |  |  |  +- org.apache.lucene:lucene-core:jar:6.6.6:compile
-[INFO] |  |  |  |  +- org.apache.geode:geode-gfsh:jar:1.14.4:runtime
-[INFO] |  |  |  |  +- org.apache.lucene:lucene-analyzers-common:jar:6.6.6:runtime
-[INFO] |  |  |  |  +- org.apache.lucene:lucene-queryparser:jar:6.6.6:runtime
-[INFO] |  |  |  |  |  \- org.apache.lucene:lucene-queries:jar:6.6.6:runtime
-[INFO] |  |  |  |  +- mx4j:mx4j:jar:3.0.2:runtime
-[INFO] |  |  |  |  \- org.apache.lucene:lucene-analyzers-phonetic:jar:6.6.6:runtime
-[INFO] |  |  |  |     \- commons-codec:commons-codec:jar:1.15:runtime
-...
-[INFO] |  |  |  +- org.apache.geode:geode-wan:jar:1.14.4:compile
-```
-
-
-However, you do not have any "search" use cases in your Spring Boot
-application that would require Apache Geode’s integration with Apache
-Lucene.
-
-
-Using your build tool, such as Gradle or Maven, you can add an exclusion
-on the `org.apache.geode:geode-lucene` transitive dependency pulled in
-and included by Spring Boot for Apache Geode’s `spring-geode-starter`,
-like so:
-
-
-#### Declaring Exclusions with Gradle
-
-
-``` prettyprint
-implementation("org.springframework.geode:spring-geode-starter:1.27") {
-  exclude group: "org.apache.geode", module: "geode-lucene"
-}
-```
-
-
-
-Declaring Exclusions with Maven
-
-
-``` prettyprint
-<?xml version="1.0" encoding="UTF-8"?>
-<pom>
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.geode</groupId>
-      <artifactId>spring-geode-starter</artifactId>
-      <version>1.27</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.geode</groupId>
-          <artifactId>geode-lucene</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-  </dependencies>
-</pom>
-```
-
-
-After the appropriate exclusion is declared, the resulting dependencies
-(or dependency tree) should look like the following:
-
-
-
-#### Analyzing Dependencies using Gradle after Exclusions
-
-
-``` prettyprint
-$ gradlew :spring-geode-starter:dependencies
-
-...
-compileClasspath - Compile classpath for source set 'main'.
-+--- org.springframework.boot:spring-boot-starter -> 3.0.0-M5
-|    +--- org.springframework.boot:spring-boot:3.0.0-M5
-|    |    +--- org.springframework:spring-core:6.0.0-M6
-...
-+--- project :spring-geode
-|    +--- project :apache-geode-extensions
-|    |    +--- org.apache.geode:geode-core:1.15.0
-|    |    |    +--- antlr:antlr:2.7.7
-...
-|    |    \--- org.apache.geode:geode-wan:1.15.0
-...
-```
-
-
-
-#### Analyzing Dependencies using Maven
-
-
-``` prettyprint
-$ mvn dependency:tree
-
-...
-[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ spring-geode-app ---
-[INFO] org.example.app:spring-geode-app:jar:0.0.1-SNAPSHOT
-[INFO] +- org.springframework.geode:spring-geode-starter:jar:1.7.4:compile
-[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.7.1:compile
-[INFO] |  |  +- org.springframework.boot:spring-boot:jar:2.7.1:compile
-...
-[INFO] |  +- org.springframework.geode:spring-geode:jar:1.7.4:compile
-[INFO] |  |  +- org.springframework.data:spring-data-geode:jar:2.7.1:compile
-[INFO] |  |  |  +- org.apache.geode:geode-core:jar:1.14.4:compile
-...
-[INFO] |  |  |  +- org.apache.geode:geode-wan:jar:1.14.4:compile
-```
-
-
-Again, we cannot overstate the importance of being careful when declaring exclusions.
-
-
-Please refer to the appropriate documentation in <a
-href="https://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html">Maven</a>
-and <a
-href="https://docs.gradle.org/current/userguide/dependency_downgrade_and_exclude.html">Gradle</a>
-to declare exclusions.</td>
-
-
-Version 1.27  
-Last updated 2022-10-10 14:40:33 -0700

@@ -11,7 +11,6 @@ template_variables:
   toclevels: 1
   java-version: 17
   jdk-javadoc: https://docs.oracle.com/en/java/javase/{java-version}/docs/api/
-  apache-geode-name: Apache Geode
   apache-geode-version: {apache-geode-artifact-version}
   apache-geode-doc-version: {apache-geode-doc-version}
   apache-geode-docs: https://geode.apache.org/docs/guide/{apache-geode-doc-version}
@@ -31,7 +30,7 @@ template_variables:
   pivotal-gemfire-docs: https://gemfire.docs.pivotal.io/{pivotal-gemfire-version}/geode/reference
   pivotal-gemfire-javadoc: https://gemfire-{pivotal-gemfire-version}-javadocs.docs.pivotal.io/
   pivotal-gemfire-website: https://pivotal.io/pivotal-gemfire
-  vmware-gemfire-name: VMware Tanzu GemFire for K8S
+  vmware-gemfire-name: VMware Tanzu GemFire
   spring-boot-docs: https://docs.spring.io/spring-boot/docs/current/reference
   spring-boot-docs-html: {spring-boot-docs}/html
   spring-boot-javadoc: https://docs.spring.io/spring-boot/docs/current/api

@@ -491,7 +491,7 @@ Example 7. Invalid Geode Property Warning Message
 
 
 ``` highlight
-[gemfire.non-existing-property] is not a valid Apache Geode property
+[gemfire.non-existing-property] is not a valid [vmware-gemfire-name] property
 ```
 
 
@@ -524,7 +524,7 @@ Example 8. Invalide Geode Property Value Warning Message
 
 
 ``` highlight
-Apache Geode Property [gemfire.security-manager] was not set
+[vmware-gemfire-name] Property [gemfire.security-manager] was not set
 ```
 
 

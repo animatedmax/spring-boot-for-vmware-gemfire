@@ -489,8 +489,6 @@ rather than being a necessity, including:
 
 - `@EnablePool(s)`
 
-- `@EnableRedisServer`
-
 - `@EnableStatistics`
 
 - `@UseGemFireProperties`
@@ -507,8 +505,7 @@ all begins with the auto-configuration provided by SBDG.
 
 If a feature or function is not covered by SBDG’s auto-configuration,
 you are responsible for enabling and configuring the feature
-appropriately, as needed by your application (for example,
-`@EnableRedisServer`).
+appropriately, as needed by your application.
 
 In other cases, you might also want to explicitly declare a
 complimentary annotation (such as `@EnableEntityDefinedRegions`) for

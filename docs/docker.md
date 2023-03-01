@@ -273,7 +273,7 @@ $ docker run -it -p 10334:10334 -p 40404:40404 -p 1099:1099 -p 7070:7070 -p 7575
  / /__/ / ____/  _____/ / /    / /
 /______/_/      /______/_/    /_/    1.12.0
 
-Monitor and Manage Apache Geode
+Monitor and Manage [vmware-gemfire-name]
 gfsh>
 ```
 

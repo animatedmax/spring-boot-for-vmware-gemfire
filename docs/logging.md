@@ -877,7 +877,7 @@ Any of the properties defined in
 
 For instance, and by default, VMware GemFire components log
 output using the Spring Boot log pattern. However, if you prefer the
-fine-grained details of Apache Geode’s logging behavior, you can change
+fine-grained details of [vmware-gemfire-name]’s logging behavior, you can change
 the `Appender` used by the VMware GemFire `Logger’s` to use the
 pre-defined "geode" `Appender` instead. Simply set the
 `spring-geode.logging.appender-ref` property to "geode" in a

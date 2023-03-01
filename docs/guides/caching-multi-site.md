@@ -632,7 +632,7 @@ public class BootGeodeMultiSiteCachingServerApplication {
                 assertThat(cache.getGatewaySenders().stream().map(GatewaySender::getId).collect(Collectors.toSet()))
                     .containsExactly(gatewaySender.getId());
 
-                System.err.printf("Apache Geode Cluster [%s] configured and bootstrapped successfully!%n",
+                System.err.printf("[vmware-gemfire-name] Cluster [%s] configured and bootstrapped successfully!%n",
                     environment.getProperty("spring.application.name", "UNKNOWN"));
             };
         }
@@ -844,7 +844,7 @@ CacheServer & Region
                 assertThat(cache.getGatewaySenders().stream().map(GatewaySender::getId).collect(Collectors.toSet()))
                     .containsExactly(gatewaySender.getId());
 
-                System.err.printf("Apache Geode Cluster [%s] configured and bootstrapped successfully!%n",
+                System.err.printf("[vmware-gemfire-name] Cluster [%s] configured and bootstrapped successfully!%n",
                     environment.getProperty("spring.application.name", "UNKNOWN"));
             };
         }
@@ -1250,7 +1250,6 @@ use-cluster-configuration=false
 ....  DistributionManager 10.99.199.24(BootGeodeMultiSiteCachingServerApplication-Site1:47528)<ec><v0>:41000...
 ....  Starting server location for Distribution Locator on localhost/127.0.0.1[11235]
 ....  Disabling statistic archival.
-....  Initialized cache service org.apache.geode.cache.lucene.internal.LuceneServiceImpl
 ....  Initialized cache service org.apache.geode.management.internal.cli.remote.OnlineCommandProcessor
 ....  Initialized cache service org.apache.geode.cache.query.internal.QueryConfigurationServiceImpl
 ....  Initializing region _monitoringRegion_10.99.199.24<v0>41000
@@ -1562,7 +1561,6 @@ name=BootGeodeMultiSiteCachingClientApplication-Site1
 
 ....  Disabling statistic archival.
 ....  Running in client mode
-....  Initialized cache service org.apache.geode.cache.lucene.internal.LuceneServiceImpl
 ....  Initialized cache service org.apache.geode.management.internal.cli.remote.OnlineCommandProcessor
 ....  Initialized cache service org.apache.geode.cache.query.internal.QueryConfigurationServiceImpl
 ....  Connected to Distributed System [BootGeodeMultiSiteCachingClientApplication-Site1]

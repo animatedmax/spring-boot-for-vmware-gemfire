@@ -40,7 +40,7 @@ VMware GemFire in your Spring Boot applications.
 <td class="icon">
 Tip
 </td>
-<td class="content">See the Spring Test for Apache Geode (STDG) <a
+<td class="content">See the Spring Test for [vmware-gemfire-name] (STDG) <a
 href="https://github.com/spring-projects/spring-test-data-geode/#stdg-in-a-nutshell">documentation</a>
 for more details.</td>
 </tr>

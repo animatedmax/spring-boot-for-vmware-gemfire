@@ -269,7 +269,7 @@ Further consider the following configuration:
 
 
 
-Example 2. Apache Geode Configuration
+Example 2. [vmware-gemfire-name] Configuration
 
 
 
@@ -428,7 +428,7 @@ Further consider the following configuration:
 
 
 
-Example 5. Apache Geode Configuration
+Example 5. [vmware-gemfire-name] Configuration
 
 
 
@@ -566,7 +566,7 @@ Further consider the following Spring configuration:
 
 
 
-Example 7. Apache Geode Configuration
+Example 7. [vmware-gemfire-name] Configuration
 
 
 
@@ -662,7 +662,7 @@ For example, consider the following configuration:
 
 
 
-Example 9. Apache Geode Configuration
+Example 9. [vmware-gemfire-name] Configuration
 
 
 
@@ -765,7 +765,7 @@ the template:
 
 
 
-Example 11. Apache Geode Configuration
+Example 11. [vmware-gemfire-name] Configuration
 
 
 

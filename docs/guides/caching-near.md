@@ -580,7 +580,7 @@ Spring Data for VMware GemFire (SDG) property (e.g.
 Common Client `application.properties`
 
 ``` highlight
-# Spring Boot application.properties for the Apache Geode ClientCache application
+# Spring Boot application.properties for the [vmware-gemfire-name] ClientCache application
 
 spring.application.name=ClientApplication
 spring.data.gemfire.pool.subscription-enabled=true
@@ -593,7 +593,7 @@ clients we want to start) each have their own client specific
 Common Client `application.properties`
 
 ``` highlight
-# Spring Boot application.properties for the Apache Geode ClientCache One application.
+# Spring Boot application.properties for the [vmware-gemfire-name] ClientCache One application.
 
 server.port=8181
 spring.application.name=ClientApplicationOne

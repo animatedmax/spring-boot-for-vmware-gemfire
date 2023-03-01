@@ -1,5 +1,5 @@
 ---
-Title: Apache Geode API Extensions
+Title: [vmware-gemfire-name] API Extensions
 ---
 
 <!-- 

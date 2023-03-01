@@ -42,7 +42,6 @@
         *   [Auto-configuration vs. Annotation-based configuration](/spring-boot/configuration-annotations.html)
         *   [Configuration Metadata Reference](/spring-boot/configuration-properties.html)
         *   [Deactivating Auto-configuration](/spring-boot/configuration-deactivate.html)
-        *   [Switching from Apache Geode to VMware GemFire or VMware GemFire for TAS](/spring-boot/switching-to-gemfire.html)
         *   [Running a VMware GemFire cluster with Spring Boot from your IDE](/spring-boot/configuration-bootstrapping.html)
         *   [Testing](/spring-boot/testing-support.html)
         *   [Examples](/spring-boot/examples.html)

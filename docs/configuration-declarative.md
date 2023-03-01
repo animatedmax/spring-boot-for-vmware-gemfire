@@ -146,8 +146,6 @@ auto-configuration:
 
 - `@EnablePool(s)`
 
-- `@EnableRedisServer`
-
 - `@EnableStatistics`
 
 - `@UseGemFireProperties`
@@ -173,8 +171,6 @@ annotations is because the annotations are server-specific:
 - `@EnableManager`
 
 - `@EnableMemcachedServer`
-
-- `@EnableRedisServer`
 
 Also, we [already stated](clientcache-applications.html) that SBDG is
 opinionated about providing a `ClientCache` instance.
@@ -346,7 +342,7 @@ Example 4. `@EnableClusterAware` INFO log output
 2021-01-20 14:02:28,745  INFO fig.annotation.ClusterAwareConfiguration: 476 - Failed to connect to localhost[10334]
 2021-01-20 14:02:28,746  INFO fig.annotation.ClusterAwareConfiguration: 470 - Successfully connected to localhost[57649]
 2021-01-20 14:02:28,746  INFO fig.annotation.ClusterAwareConfiguration: 576 - Cluster was found; Auto-configuration made [1] successful connection(s);
-2021-01-20 14:02:28,746  INFO fig.annotation.ClusterAwareConfiguration: 586 - Spring Boot application is running in a client/server topology, using a standalone Apache Geode-based cluster
+2021-01-20 14:02:28,746  INFO fig.annotation.ClusterAwareConfiguration: 586 - Spring Boot application is running in a client/server topology, using a standalone [vmware-gemfire-name]-based cluster
 ```
 
 <p class="note"><strong>Note:</strong>
@@ -649,19 +645,12 @@ use `@EnableEntityDefinedRegions`. This is because `@EnableIndexing`
 requires the entities to be scanned and analyzed for mapping metadata
 (defined on the class type of the entity). This includes annotations
 such as the Spring Data Commons `@Id` annotation and the annotations
-provided by SDG, such as `@Indexed` and `@LuceneIndexed`.
+provided by SDG, such as `@Indexed`.
 
 The `@Id` annotation identifies the (primary) key of the entity. The
 `@Indexed` annotation defines OQL indexes on object fields, which can be
-used in the predicates of your OQL queries. The `@LuceneIndexed`
-annotation is used to define the Apache Lucene Indexes required for
-searches.
+used in the predicates of your OQL queries.
 
-<p class="note"><strong>Note:</strong>
-Lucene Indexes can only be created on
-<code>PARTITION</code> Regions, and <code>PARTITION</code> Regions can
-only be defined on the server side.
-</p>
 
 You may have noticed that the `Customer` entity class’s `name` field was
 annotated with `@Indexed`.

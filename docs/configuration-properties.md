@@ -1811,26 +1811,6 @@ class="tableblock halign-left valign-top"><p><code>ASCII</code></p></td>
 <td
 class="tableblock halign-left valign-top"><p>https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/data/gemfire/config/annotation/EnableMemcachedServer.html#protocol--[<code>EnableMemcachedServer.protocol</code>]</p></td>
 </tr>
-<tr class="odd">
-<td
-class="tableblock halign-left valign-top"><p><code>service.redis.bind-address</code></p></td>
-<td class="tableblock halign-left valign-top"><p>The IP address or
-hostname of the system NIC used by the embedded Redis server to bind and
-listen for connections.</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td
-class="tableblock halign-left valign-top"><p>https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/data/gemfire/config/annotation/EnableRedisServer.html#bindAddress--[<code>EnableRedis.bindAddress</code>]</p></td>
-</tr>
-<tr class="even">
-<td
-class="tableblock halign-left valign-top"><p><code>service.redis.port</code></p></td>
-<td class="tableblock halign-left valign-top"><p>The port used by the
-embedded Redis server to listen for connections.</p></td>
-<td
-class="tableblock halign-left valign-top"><p><code>6479</code></p></td>
-<td
-class="tableblock halign-left valign-top"><p>https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/data/gemfire/config/annotation/EnableRedisServer.html#port--[<code>EnableRedisServer.port</code>]</p></td>
-</tr>
 </tbody>
 </table>
 

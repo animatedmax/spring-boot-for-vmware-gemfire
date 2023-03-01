@@ -143,7 +143,7 @@ Build-Date: 2017-09-16 07:20:46 -0700
 Build-Id: abaker 0
 Build-Java-Version: 1.8.0_121
 Build-Platform: Mac OS X 10.12.3 x86_64
-Product-Name: Apache Geode
+Product-Name: [vmware-gemfire-name]
 Product-Version: 1.2.1
 Source-Date: 2017-09-08 11:57:38 -0700
 Source-Repository: release/1.2.1
@@ -226,7 +226,7 @@ jblum-mbpro-2:lab jblum$ gfsh
  / /__/ / ____/  _____/ / /    / /
 /______/_/      /______/_/    /_/    1.2.1
 
-Monitor and Manage Apache Geode
+Monitor and Manage [vmware-gemfire-name]
 
 gfsh>connect
 Connecting to Locator at [host=localhost, port=10334] ..

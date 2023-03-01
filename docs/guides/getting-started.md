@@ -359,7 +359,6 @@ Class Path:
   .../7b533399d6f88039537bb757f25a2c90d46fcdc7/spring-boot-starter-2.2.0.BUILD-SNAPSHOT.jar
   .../spring-data-geode-2.2.0.RC3.jar
   .../geode-cq-1.9.0.jar
-  .../geode-lucene-1.9.0.jar
   .../geode-wan-1.9.0.jar
   .../geode-core-1.9.0.jar
   .../spring-shell-1.2.0.RELEASE.jar
@@ -446,9 +445,6 @@ Class Path:
   .../classgraph-4.0.6.jar
   .../rmiio-2.1.2.jar
   .../geode-common-1.9.0.jar
-  .../lucene-analyzers-common-6.6.2.jar
-  .../lucene-queryparser-6.6.2.jar
-  .../lucene-core-6.6.2.jar
   .../mx4j-3.0.2.jar
   .../jackson-core-2.9.9.jar
   .../accessors-smart-1.2.jar
@@ -463,7 +459,6 @@ Class Path:
   .../javax.transaction-api-1.3.jar
   .../jetty-http-9.4.20.v20190813.jar
   .../jetty-io-9.4.20.v20190813.jar
-  .../lucene-queries-6.6.2.jar
   .../asm-5.0.4.jar
   .../jetty-util-9.4.20.v20190813.jar
   .../httpcore-4.4.12.jar
@@ -471,7 +466,6 @@ Class Path:
   .../lombok-1.18.8.jar
   .../snakeyaml-1.25.jar
   .../junit-jupiter-engine-5.5.2.jar
-  .../lucene-analyzers-phonetic-6.6.2.jar
   /Applications/IntelliJ IDEA 19 CE.app/Contents/lib/idea_rt.jar
 Library Path:
   /Users/jblum/Library/Java/Extensions
@@ -650,9 +644,6 @@ memcached-bind-address=
 memcached-port=0
 memcached-protocol=ASCII
 off-heap-memory-size=
-redis-bind-address=
-redis-password=
-redis-port=0
 redundancy-zone=
 remote-locators=
 remove-unresponsive-client=false
@@ -724,7 +715,6 @@ validate-serializable-objects=false
 
 ... : Disabling statistic archival.
 ... : Running in client mode
-... : Initialized cache service org.apache.geode.cache.lucene.internal.LuceneServiceImpl
 ... : Connected to Distributed System [SpringBasedCacheClientApplication]
       as Member [*****(SpringBasedCacheClientApplication:7156:loner):0:e5f5b638:SpringBasedCacheClientApplication]
       in Group(s) [[]]
@@ -1451,7 +1441,7 @@ Gfsh shell script to start an VMware GemFire cluster
 
 
 ``` highlight
-# Gfsh shell script to start an Apache Geode cluster with 1 Locator and 2 Servers.
+# Gfsh shell script to start an [vmware-gemfire-name] cluster with 1 Locator and 2 Servers.
 
 start locator --name=LocatorOne --log-level=config
 start server --name=ServerOne --log-level=config

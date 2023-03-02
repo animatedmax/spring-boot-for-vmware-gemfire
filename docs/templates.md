@@ -269,7 +269,7 @@ Further consider the following configuration:
 
 
 
-Example 2. [vmware-gemfire-name] Configuration
+Example 2. VMware GemFire Configuration
 
 
 
@@ -428,7 +428,7 @@ Further consider the following configuration:
 
 
 
-Example 5. [vmware-gemfire-name] Configuration
+Example 5. VMware GemFire Configuration
 
 
 
@@ -566,7 +566,7 @@ Further consider the following Spring configuration:
 
 
 
-Example 7. [vmware-gemfire-name] Configuration
+Example 7. VMware GemFire Configuration
 
 
 
@@ -662,7 +662,7 @@ For example, consider the following configuration:
 
 
 
-Example 9. [vmware-gemfire-name] Configuration
+Example 9. VMware GemFire Configuration
 
 
 
@@ -765,7 +765,7 @@ the template:
 
 
 
-Example 11. [vmware-gemfire-name] Configuration
+Example 11. VMware GemFire Configuration
 
 
 

@@ -218,7 +218,7 @@ $ gfsh
  / /__/ / ____/  _____/ / /    / /
 /______/_/      /______/_/    /_/    1.2.1
 
-Monitor and Manage [vmware-gemfire-name]
+Monitor and Manage VMware GemFire
 
 gfsh>connect
 Connecting to Locator at [host=localhost, port=10334] ..
@@ -626,7 +626,7 @@ Build-Date: 2019-04-19 11:49:13 -0700
 Build-Id: onichols 0
 Build-Java-Version: 1.8.0_192
 Build-Platform: Mac OS X 10.14.4 x86_64
-Product-Name: [vmware-gemfire-name]
+Product-Name: VMware GemFire
 Product-Version: 1.9.0
 Source-Date: 2019-04-19 11:11:31 -0700
 Source-Repository: release/1.9.0
@@ -675,7 +675,7 @@ $ gfsh
  / /__/ / ____/  _____/ / /    / /
 /______/_/      /______/_/    /_/    1.9.0
 
-Monitor and Manage [vmware-gemfire-name]
+Monitor and Manage VMware GemFire
 
 gfsh>connect
 Connecting to Locator at [host=localhost, port=10334] ..

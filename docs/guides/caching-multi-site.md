@@ -632,7 +632,7 @@ public class BootGeodeMultiSiteCachingServerApplication {
                 assertThat(cache.getGatewaySenders().stream().map(GatewaySender::getId).collect(Collectors.toSet()))
                     .containsExactly(gatewaySender.getId());
 
-                System.err.printf("[vmware-gemfire-name] Cluster [%s] configured and bootstrapped successfully!%n",
+                System.err.printf("VMware GemFire Cluster [%s] configured and bootstrapped successfully!%n",
                     environment.getProperty("spring.application.name", "UNKNOWN"));
             };
         }
@@ -844,7 +844,7 @@ CacheServer & Region
                 assertThat(cache.getGatewaySenders().stream().map(GatewaySender::getId).collect(Collectors.toSet()))
                     .containsExactly(gatewaySender.getId());
 
-                System.err.printf("[vmware-gemfire-name] Cluster [%s] configured and bootstrapped successfully!%n",
+                System.err.printf("VMware GemFire Cluster [%s] configured and bootstrapped successfully!%n",
                     environment.getProperty("spring.application.name", "UNKNOWN"));
             };
         }

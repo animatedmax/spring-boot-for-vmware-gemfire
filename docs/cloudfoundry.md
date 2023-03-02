@@ -508,7 +508,7 @@ $ gfsh
  / /__/ / ____/  _____/ / /    / /
 /______/_/      /______/_/    /_/    1.6.0
 
-Monitor and Manage [vmware-gemfire-name]
+Monitor and Manage VMware GemFire
 gfsh>
 ```
 
@@ -521,7 +521,7 @@ cluster
 
 ``` highlight
 #!/bin/gfsh
-# Gfsh shell script to configure and bootstrap a [vmware-gemfire-name] cluster.
+# Gfsh shell script to configure and bootstrap a VMware GemFire cluster.
 
 start locator --name=LocatorOne --log-level=config --classpath=@project-dir@/apache-geode-extensions/build/libs/apache-geode-extensions-@project-version@.jar --J=-Dgemfire.security-manager=org.springframework.geode.security.TestSecurityManager --J=-Dgemfire.http-service-port=8080
 

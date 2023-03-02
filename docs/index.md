@@ -270,7 +270,7 @@ for example, `spring-geode-starter-session`), if you need to enable
 Spring Boot Actuator endpoints for VMware GemFire (for example,
 `spring-geode-starter-actuator`), or if you need assistance writing
 complex Unit and (Distributed) Integration Tests with Spring Test for
-[vmware-gemfire-name] (STDG) (for example, `spring-geode-starter-test`).
+VMware GemFire (STDG) (for example, `spring-geode-starter-test`).
 
 
 You can declare and use any one of the SBDG modules:
@@ -922,12 +922,12 @@ For more details on Gradle dependency management, please refer to the
 
 
 Sometimes, though rarely, it may be necessary to exclude a (transitive)
-dependency included by a Spring Boot, or Spring Boot for [vmware-gemfire-name],
+dependency included by a Spring Boot, or Spring Boot for VMware GemFire,
 starter.
 
 
 Perhaps a transitive dependency, such as Apache Log4j or Jackson, is
-pulled in by an underlying data store dependency, such as [vmware-gemfire-name]
+pulled in by an underlying data store dependency, such as VMware GemFire
 or Redis, when using a starter (for example:
 `spring-boot-starter-data-redis`, or `spring-geode-starter`), that could
 cause a conflict with your Spring Boot application. Or, maybe the

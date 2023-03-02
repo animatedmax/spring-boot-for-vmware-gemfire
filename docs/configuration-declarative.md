@@ -342,7 +342,7 @@ Example 4. `@EnableClusterAware` INFO log output
 2021-01-20 14:02:28,745  INFO fig.annotation.ClusterAwareConfiguration: 476 - Failed to connect to localhost[10334]
 2021-01-20 14:02:28,746  INFO fig.annotation.ClusterAwareConfiguration: 470 - Successfully connected to localhost[57649]
 2021-01-20 14:02:28,746  INFO fig.annotation.ClusterAwareConfiguration: 576 - Cluster was found; Auto-configuration made [1] successful connection(s);
-2021-01-20 14:02:28,746  INFO fig.annotation.ClusterAwareConfiguration: 586 - Spring Boot application is running in a client/server topology, using a standalone [vmware-gemfire-name]-based cluster
+2021-01-20 14:02:28,746  INFO fig.annotation.ClusterAwareConfiguration: 586 - Spring Boot application is running in a client/server topology, using a standalone VMware GemFire-based cluster
 ```
 
 <p class="note"><strong>Note:</strong>

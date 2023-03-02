@@ -1441,7 +1441,7 @@ Gfsh shell script to start an VMware GemFire cluster
 
 
 ``` highlight
-# Gfsh shell script to start an [vmware-gemfire-name] cluster with 1 Locator and 2 Servers.
+# Gfsh shell script to start an VMware GemFire cluster with 1 Locator and 2 Servers.
 
 start locator --name=LocatorOne --log-level=config
 start server --name=ServerOne --log-level=config

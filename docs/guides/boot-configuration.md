@@ -1229,7 +1229,7 @@ documented properties:
 Application security configuration properties
 
 ``` highlight
-# Security configuration for [vmware-gemfire-name] using Spring Boot and Spring Data for [vmware-gemfire-name] (SDG) properties
+# Security configuration for VMware GemFire using Spring Boot and Spring Data for VMware GemFire (SDG) properties
 
 spring.boot.data.gemfire.security.ssl.keystore.name=example-trusted-keystore.jks
 spring.data.gemfire.security.username=test

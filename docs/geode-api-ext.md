@@ -1,5 +1,5 @@
 ---
-Title: [vmware-gemfire-name] API Extensions
+Title: VMware GemFire API Extensions
 ---
 
 <!-- 

@@ -15,5 +15,6 @@
  the License.
 -->
 
+* [Landing Page](spring_boot_landing_page.html)
 * [Spring Boot for GemFire](https://docs.vmware.com/en/Spring-Boot-for-VMware-GemFire/index.html)
 * [Spring Data for GemFire](https://docs.vmware.com/en/Spring-Data-for-VMware-GemFire/index.html)

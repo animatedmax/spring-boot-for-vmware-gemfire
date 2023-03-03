@@ -138,6 +138,7 @@ To add Spring Boot for VMware GemFire to a project:
         ```
 
     For servers:
+
     NOTE: The server dependencies are only required if the user is starting an embedded GemFire server using Spring.
 
     * **Maven**:
@@ -174,9 +175,9 @@ To add Spring Boot for VMware GemFire to a project:
 
 To enable additional functionality, such as Spring Boot Actuator or Spring Session, declare any of the following modules in your `.pom` or `.gradle` file (in addition to the `spring-gemfire-starter  dependency)`:
 
-* spring-boot-actuator-2.7-gemfire-9.15:1.1.0
-* spring-boot-logging-2.7-gemfire-9.15:1.1.0
-* spring-boot-session-2.7-gemfire-9.15:1.1.0
+* `spring-boot-actuator-2.7-gemfire-9.15:1.1.0`
+* `spring-boot-logging-2.7-gemfire-9.15:1.1.0`
+* `spring-boot-session-2.7-gemfire-9.15:1.1.0`
 
 ## Reference Guide
 

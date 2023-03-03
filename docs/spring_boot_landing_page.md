@@ -85,88 +85,88 @@ To add Spring Boot for VMware GemFire to a project:
 
     For version 1.0.0:
 
-        * **Maven**:
+    * **Maven**:
 
-            ```
-            <dependency>
-                <groupId>com.vmware.gemfire</groupId>
-                <artifactId>spring-boot-2.7-gemfire-9.15</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-            ```
+        ```
+        <dependency>
+            <groupId>com.vmware.gemfire</groupId>
+            <artifactId>spring-boot-2.7-gemfire-9.15</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        ```
 
-        * **Gradle**:
+    * **Gradle**:
 
-            ```
-            implementation "com.vmware.gemfire:spring-boot-2.7-gemfire-9.15:1.0.0"
-            ```
+        ```
+        implementation "com.vmware.gemfire:spring-boot-2.7-gemfire-9.15:1.0.0"
+        ```
 
     For version 1.1.0 and later:
 
     Starting in version 1.1.0, you will be required to "Bring Your Own GemFire," which will allow for improved flexibility with GemFire patch versions. In addition to the Spring Boot for VMware GemFire dependency, you must add an explicit dependency on the desired version of GemFire. The required dependencies will differ for clients and servers.
 
-        For clients:
+    For clients:
 
-            * **Maven**:
+    * **Maven**:
 
-                ```
-                <dependency>
+        ```
+        <dependency>
+            <groupId>com.vmware.gemfire</groupId>
+            <artifactId>spring-boot-2.7-gemfire-9.15</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vmware.gemfire</groupId>
+            <artifactId>geode-core</artifactId>
+            <version>9.15.4</version>
+        </dependency>
+        <!--if using continuous queries-->
+        <dependency>
+            <groupId>com.vmware.gemfire</groupId>
+            <artifactId>geode-cq</artifactId>
+            <version>9.15.4</version>
+        </dependency>
+        ```
+
+    * **Gradle**:
+
+        ```
+        implementation "com.vmware.gemfire:spring-boot-2.7-gemfire-9.15:1.1.0"
+        implementation "com.vmware.gemfire:geode-core:9.15.4"
+        // if using continuous queries
+        implementation "com.vmware.gemfire:geode-cq:9.15.4"
+        ```
+
+    For servers:
+    NOTE: The server dependencies are only required if the user is starting an embedded GemFire server using Spring.
+
+    * **Maven**:
+
+        ```
+        <dependency>
+            <groupId>com.vmware.gemfire</groupId>
+            <artifactId>spring-boot-2.7-gemfire-9.15</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vmware.gemfire</groupId>
+            <artifactId>geode-sever-all</artifactId>
+            <version>9.15.4</version>
+            <exclusions>
+                <exclusion>
                     <groupId>com.vmware.gemfire</groupId>
-                    <artifactId>spring-boot-2.7-gemfire-9.15</artifactId>
-                    <version>1.1.0</version>
-                </dependency>
-                <dependency>
-                    <groupId>com.vmware.gemfire</groupId>
-                    <artifactId>geode-core</artifactId>
-                    <version>9.15.4</version>
-                </dependency>
-                <!--if using continuous queries-->
-                <dependency>
-                    <groupId>com.vmware.gemfire</groupId>
-                    <artifactId>geode-cq</artifactId>
-                    <version>9.15.4</version>
-                </dependency>
-                ```
+                    <artifactId>geode-log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        ```
 
-            * **Gradle**:
+    * **Gradle**:
 
-                ```
-                implementation "com.vmware.gemfire:spring-boot-2.7-gemfire-9.15:1.1.0"
-                implementation "com.vmware.gemfire:geode-core:9.15.4"
-                // if using continuous queries
-                implementation "com.vmware.gemfire:geode-cq:9.15.4"
-                ```
-
-        For servers:
-        NOTE: The server dependencies are only required if the user is starting an embedded GemFire server using Spring.
-
-            * **Maven**:
-
-                ```
-                <dependency>
-                    <groupId>com.vmware.gemfire</groupId>
-                    <artifactId>spring-boot-2.7-gemfire-9.15</artifactId>
-                    <version>1.1.0</version>
-                </dependency>
-                <dependency>
-                    <groupId>com.vmware.gemfire</groupId>
-                    <artifactId>geode-sever-all</artifactId>
-                    <version>9.15.4</version>
-                    <exclusions>
-                        <exclusion>
-                            <groupId>com.vmware.gemfire</groupId>
-                            <artifactId>geode-log4j</artifactId>
-                        </exclusion>
-                    </exclusions>
-                </dependency>
-                ```
-
-            * **Gradle**:
-
-                ```
-                implementation "com.vmware.gemfire:spring-boot-2.7-gemfire-9.15:1.1.0"
-                implementation ("com.vmware.gemfire:geode-server-all:9.15.4"){exclude group: 'com.vmware.gemfire', module: 'geode-log4j'}
-                ```
+        ```
+        implementation "com.vmware.gemfire:spring-boot-2.7-gemfire-9.15:1.1.0"
+        implementation ("com.vmware.gemfire:geode-server-all:9.15.4"){exclude group: 'com.vmware.gemfire', module: 'geode-log4j'}
+        ```
 
 1. Your application is now ready to connect with your GemFire instance.
 
